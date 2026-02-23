@@ -1,0 +1,13 @@
+name: My First Action
+on: [push] # Код push хийх болгонд ажиллана
+jobs:
+  Check-My-Repo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code-оо татаж авах
+        uses: actions/checkout@v4
+      - name: Мэдээлэл хэвлэх
+        run: |
+          echo "Сайн байна уу? ${{ github.actor }}!"
+          echo "Энэ бол таны анхны автоматжуулалт."
+          ls -R
